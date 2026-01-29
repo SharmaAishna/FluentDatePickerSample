@@ -1,5 +1,6 @@
 ﻿@page "/"
-@using ModelPerson
+@using Person
+
 
 
 
@@ -41,7 +42,7 @@
     </FluentGrid>
 </FluentEditForm>
 @code{
-    private Class1 Person { get; set; } = new Class1();
+    private PersonModel Person { get; set; } = new PersonModel();
     private void HandleCreate()
     {
         // Handle form submission logic here

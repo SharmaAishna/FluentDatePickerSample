@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="../ModelPerson/ModelPerson.csproj" />
   <Project Path="FluentDatePickerSample.Client/FluentDatePickerSample.Client.csproj" />
   <Project Path="FluentDatePickerSample/FluentDatePickerSample.csproj" />
+  <Project Path="Person/Person.csproj" Id="bd0fefdf-8940-472e-8f71-18be060621c2" />
 </Solution>

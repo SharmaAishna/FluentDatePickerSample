@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../ModelPerson/ModelPerson.csproj" />
+  <Project Path="FluentDatePickerSample.Client/FluentDatePickerSample.Client.csproj" />
+  <Project Path="FluentDatePickerSample/FluentDatePickerSample.csproj" />
+</Solution>

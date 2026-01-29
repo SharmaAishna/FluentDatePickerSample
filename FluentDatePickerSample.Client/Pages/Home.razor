@@ -1,0 +1,50 @@
+﻿@page "/"
+@using ModelPerson
+
+
+
+<FluentEditForm FormName="PersonCreate" Model="Person" OnValidSubmit="HandleCreate">
+    <DataAnnotationsValidator />
+
+    <FluentGrid Spacing="1" AdaptiveRendering="true">
+        <FluentLabel>Enter a date in the format 01012000 or any characters while navigating using the Tab key. Sometimes, 01012000 does not get cleared. Also, when selecting Date1 directly instead of starting from the Name input, an incorrectly formatted date doesn't get cleared. For reference Added a video In <b>FluentDatePickerSample.Assest</b> </FluentLabel>
+
+        <FluentGridItem xs="10">
+            <FluentTextField Name="Name" @bind-Value="Person.Name" Label="Name" style="width:100%" />
+            <FluentValidationMessage For="@(() => Person.Name)" />
+        </FluentGridItem>
+
+        <FluentGridItem xs="10">
+            <FluentDatePicker Name="Date1"
+                              Value="Person.Date1"
+                              Placeholder="DD-MM-JJJJ"
+                              PopupHorizontalPosition="@HorizontalPosition.Left"
+                              Label="Date1" />
+            <FluentValidationMessage For="@(() => Person.Date1)" />
+                </FluentGridItem>
+            <FluentGridItem xs="10">
+                <FluentDatePicker Name="Date2"
+                                  Value="Person.Date2"
+                                  Placeholder="DD-MM-JJJJ"
+                                  PopupHorizontalPosition="@HorizontalPosition.Left"
+                                  Label="Date2" />
+                <FluentValidationMessage For="@(() => Person.Date2)" />
+        </FluentGridItem>
+                <FluentGridItem xs="10">
+                    <FluentDatePicker Name="Date3"
+                                      Value="Person.Date3"
+                                      Placeholder="DD-MM-JJJJ"
+                                      PopupHorizontalPosition="@HorizontalPosition.Left"
+                                      Label="Date1" />
+                    <FluentValidationMessage For="@(() => Person.Date3)" />
+        </FluentGridItem>
+    </FluentGrid>
+</FluentEditForm>
+@code{
+    private Class1 Person { get; set; } = new Class1();
+    private void HandleCreate()
+    {
+        // Handle form submission logic here
+    }
+   
+}
